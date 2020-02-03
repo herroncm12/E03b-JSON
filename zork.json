@@ -159,7 +159,7 @@
 		"name": "Forest",
 		"desc": "This is a dimly lit forest, with large trees all around.  One\nparticularly large tree with some low branches stands here.",
 		"exits": [{
-			"exit": "UP",
+			"exit": "DOWN",
 			"target": "TREE"
 		}, {
 			"exit": "NORTH",
@@ -529,7 +529,7 @@
 	},
 	"MGRAT": {
 		"name": "Grating Room",
-		"desc": "",
+		"desc": "If you stay here much loonger, you will be eaten by a Grue",
 		"exits": [{
 			"exit": "SW",
 			"target": "MAZ11"
@@ -543,8 +543,9 @@
 		"name": "Maze",
 		"desc": "This is part of a maze of twisty little passages, all alike.",
 		"exits": [{
-			"exit": "WEST",
+			"exit": "WEST", 
 			"target": "MAZE5"
+			
 		}, {
 			"exit": "SW",
 			"target": "MAZ11"
@@ -778,7 +779,7 @@
 	},
 	"EGYPT": {
 		"name": "Egyptian Room",
-		"desc": "This is a room which looks like an Egyptian tomb.  There is an\nascending staircase in the room as well as doors, east and south.",
+		"desc": "This is a room which looks like an Egyptian tomb. There is a mummy sprawled on the floor. There is an\nascending staircase in the room as well as doors, east and south.",
 		"exits": [{
 			"exit": "UP",
 			"target": "ICY"
@@ -788,8 +789,17 @@
 		}, {
 			"exit": "EAST",
 			"target": "CRAW1"
+			
 		}],
-		"items": []
+		"items": [
+			{
+				"items": "MUMMY" "sword",
+				"desc": "An ancient Egyptian mummy is sprawled on the floor",
+				"take": "you stuff the mummy and the sword into your sack"
+			}
+			
+		]
+		
 	},
 	"ICY": {
 		"name": "Glacier Room",
@@ -884,6 +894,9 @@
 		}, {
 			"exit": "NORTH",
 			"target": "CRAW3"
+		}, {
+			"exit": "NORTH",
+			"target": "MIRR1"
 		}, {
 			"exit": "EAST",
 			"target": "CAVE2"
@@ -1072,7 +1085,7 @@
 	},
 	"DEAD7": {
 		"name": "Dead End",
-		"desc": "Dead End",
+		"desc": "You have reached a dead end",
 		"exits": [{
 			"exit": "SOUTH",
 			"target": "BLADD"
@@ -1117,7 +1130,7 @@
 	},
 	"BATS": {
 		"name": "Bat Room",
-		"desc": "",
+		"desc": "This is a cave full of bats. They are currently sleeping",
 		"exits": [{
 			"exit": "EAST",
 			"target": "SQUEE"
@@ -1231,7 +1244,7 @@
 	},
 	"MINE7": {
 		"name": "Coal mine",
-		"desc": "This is a non-descript part of a coal mine.",
+		"desc": "A sign is here that points down.",
 		"exits": [{
 			"exit": "EAST",
 			"target": "MINE1"
@@ -1245,7 +1258,8 @@
 			"exit": "SOUTH",
 			"target": "MINE6"
 		}],
-		"items": []
+		"items": ["SIGN"]
+		
 	},
 	"DOME": {
 		"name": "Dome Room",
@@ -1681,7 +1695,7 @@
 	},
 	"FCHMP": {
 		"name": "Moby lossage",
-		"desc": "",
+		"desc": "You are stuck with no way out!",
 		"exits": [],
 		"items": []
 	},
@@ -2063,7 +2077,11 @@
 		}, {
 			"exit": "SOUTH",
 			"target": "GALLE"
-		}],
+		}, {
+			"exit": "ROB",
+			"target": "BKVAU"
+		}
+	],
 		"items": []
 	},
 	"BKTW": {
@@ -2179,7 +2197,7 @@
 	},
 	"CP": {
 		"name": "Room in a Puzzle",
-		"desc": "",
+		"desc": "Just a room (not suspicious at all)",
 		"exits": [{
 			"exit": "NORTH",
 			"target": "FCHMP"
@@ -2434,7 +2452,7 @@
 	},
 	"MRDE": {
 		"name": "Narrow Room",
-		"desc": "",
+		"desc": "You are stuck with no way out!",
 		"exits": [],
 		"items": []
 	},
@@ -2446,13 +2464,13 @@
 	},
 	"MRGE": {
 		"name": "Narrow Room",
-		"desc": "",
+		"desc": "You are stuck with no way out!",
 		"exits": [],
 		"items": []
 	},
 	"MRGW": {
 		"name": "Narrow Room",
-		"desc": "",
+		"desc": "You are stuck with no way out!",
 		"exits": [],
 		"items": []
 	},
@@ -2791,7 +2809,7 @@
 	},
 	"PCELL": {
 		"name": "Prison Cell",
-		"desc": "",
+		"desc": "You are stuck with no way out!",
 		"exits": [],
 		"items": []
 	},
